@@ -11,10 +11,16 @@
 
 int main(int argc, const char * argv[])
 {
-    string in = "/Users/caoshougang/shoguncao/数据/Project/csgUnpack/ANRISONOZAKI.rar";
-    string out = "/Users/caoshougang/shoguncao/数据/Project/csgUnpack/ANRISONOZAKI.avi";
+    if(argc < 3)
+		return -1;
     
-    CSGUnpack unpack = CSGUnpack(in, out);
+	string in_file_name = argv[1];
+	string out_file_name = argv[2];
+    
+//    string in = "/Users/caoshougang/shoguncao/数据/Project/csgUnpack/ANRISONOZAKI.rar";
+//    string out = "/Users/caoshougang/shoguncao/数据/Project/csgUnpack/ANRISONOZAKI.avi";
+    
+    CSGUnpack unpack = CSGUnpack(in_file_name, out_file_name);
     
     unpack.unpack();
     
